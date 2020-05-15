@@ -22,3 +22,17 @@ Mes de abril
 - ---------------------------------
 **MES MAYO**
 - --------------------------------
+- En este mes de Mayo hasta el dia 15 del mismo mes se ha estudiado las caracteristicas principales del Spring Boot y Spring MVC, lo que podemos descatar:
+  - El estudio de una estructura que puede llevar una aplicacion gracias al Spring Boot. 
+  - Los conceptos de Java EE
+  - Los controladores que se usara mediante anotaciones (@Controller)
+  - Las vistas o es lo mismo el diseño que tendra la aplicacion a traves de HTML y CSS
+  - La creacion de de objetos para una clase y despues algunas formas como eliminar dicho objeto o modificarlo. Pero lo importante de esta leccion es la conexion que se hara con los controladores, todo esto con la anotacion @AutoWired
+  - Spring security para un control de acceso de los usuarios
+  - Spring Session para guardar los pasos que haga el usuario dentro de la aplicacion sin que tenga que esta pendiente.
+  - Spring Data, la base de datos del Spring, lo mas importante todo, donde todo lo que hagamos tendra que ir a algun sitio donde se quedara guardado, se ha estudiado Hibernate, noSQL y H2 para seguir con los pasos que nos ha propuesto Spring Data, por ultimo todo esto se hara con JPA.
+- Con esto queda finalizado el estudio realizados en estos dos ultimos meses, con la vigilancia del profesor de Programacion y sus detallados consejos.
+------------------------------------------
+**DIA 1 DE PROYECTO(16-05-2020)**
+------------------------------------------
+- Por ahora no se subira nada al Git (Por lo menos el dia de hoy) se centrara mas que nada en ¿Como vamos a hacer el proyecto? vamos a usar un poco la imaginacion antes de dar un paso en falso, si no es hoy mañana se empezara a subir poco a poco el proyecto. (ACTUALIZANDOSE)
