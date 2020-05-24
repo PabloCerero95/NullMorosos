@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>NullMorosos</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+ <link rel="stylesheet" type="text/css" href="static/css/index.css" 
+ 	th:href="@{/css/index.css}">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <div id="preloader"></div>
+
+  <!--==========================
+  Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        <div class="hero-logo">
+          <img class="" src="https://i.ibb.co/4JR7Kbw/logo.jpg" alt="Ada">
+        </div>
+
+        <h1>BIENVENIDOS A  NULLMOROSOS</h1>
+        <h2><span class="rotating">¡La aplicacion en la que ningun moroso esta libre!</span></h2>
+        <div class="actions">
+<!--         	<form class="col-12" th:action="@{/usuarios/irLoginUsuario}" method="get"> -->
+
+<!-- 				<button class="btn-get-started" type="submit">Entrar</button> -->
+<!--           	</form> -->
+<a href="/login" class="btn-get-started">ENTRAR</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ </body>
+ </html>
