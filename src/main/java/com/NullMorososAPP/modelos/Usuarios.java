@@ -1,14 +1,15 @@
 package com.NullMorososAPP.modelos;
 
+
 import java.util.Date;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -17,43 +18,50 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
-@Table(name = "Morosos")
+@Table(name = "Usuarios")
 @EntityListeners(AuditingEntityListener.class)
-public class Morosos {
+public class Usuarios {
 
 	@Id
 	@GeneratedValue
-	@Column
+	@Column 
 	private long id;
 
+	@Column(nullable = false)
+	private String nick;
+	
+	@Column(nullable = false)
+	private String clave;
+	
 	@Column(nullable = false)
 	private String nombre;
 
 	@Column(nullable = false)
 	private String apellidos;
 
-	@Column(nullable = false)
-	private float cantidad;
-
 	@CreatedDate
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column
 	private Date fecha;
 
-	@ManyToOne
-	@JoinColumn(name = "usuario_id")
-	private Usuarios usuario;
-
-	public Morosos() {
-
-	}
-
-	public Morosos(String nombre, String apellidos, Usuarios usuario, float cantidad) {
+	public Usuarios(String nombre, String apellidos, String nick, String clave) { // COGERLO CON PINZAS SI DA FALLO COLOCAR EL ID Y FECHA
 		super();
+		this.nick = nick;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
-		this.usuario = usuario;
-		this.cantidad = cantidad;
+		this.clave = clave;
+	}
+	
+	public Usuarios() { }
+
+	
+	
+	public String getClave() {
+		return clave;
+	}
+
+	public void setClave(String clave) {
+		this.clave = clave;
 	}
 
 	public long getId() {
@@ -87,33 +95,27 @@ public class Morosos {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
+	
 
-	public Usuarios getUsuario() {
-		return usuario;
+	public String getNick() {
+		return nick;
 	}
 
-	public void setUsuario(Usuarios usuario) {
-		this.usuario = usuario;
+	public void setNick(String nick) {
+		this.nick = nick;
 	}
 
-	public float getCantidad() {
-		return cantidad;
-	}
-
-	public void setCantidad(float cantidad) {
-		this.cantidad = cantidad;
-	}
+	
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((apellidos == null) ? 0 : apellidos.hashCode());
-		result = prime * result + Float.floatToIntBits(cantidad);
 		result = prime * result + ((fecha == null) ? 0 : fecha.hashCode());
 		result = prime * result + (int) (id ^ (id >>> 32));
+		result = prime * result + ((nick == null) ? 0 : nick.hashCode());
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
-		result = prime * result + ((usuario == null) ? 0 : usuario.hashCode());
 		return result;
 	}
 
@@ -125,13 +127,11 @@ public class Morosos {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Morosos other = (Morosos) obj;
+		Usuarios other = (Usuarios) obj;
 		if (apellidos == null) {
 			if (other.apellidos != null)
 				return false;
 		} else if (!apellidos.equals(other.apellidos))
-			return false;
-		if (Float.floatToIntBits(cantidad) != Float.floatToIntBits(other.cantidad))
 			return false;
 		if (fecha == null) {
 			if (other.fecha != null)
@@ -140,23 +140,24 @@ public class Morosos {
 			return false;
 		if (id != other.id)
 			return false;
+		if (nick == null) {
+			if (other.nick != null)
+				return false;
+		} else if (!nick.equals(other.nick))
+			return false;
 		if (nombre == null) {
 			if (other.nombre != null)
 				return false;
 		} else if (!nombre.equals(other.nombre))
-			return false;
-		if (usuario == null) {
-			if (other.usuario != null)
-				return false;
-		} else if (!usuario.equals(other.usuario))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Morosos [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", cantidad=" + cantidad
-				+ ", fecha=" + fecha + ", usuario=" + usuario + "]";
+		return "Usuarios [id=" + id + ", nick=" + nick + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fecha="
+				+ fecha + "]";
 	}
 
+	
 }
