@@ -105,15 +105,15 @@ public class AppController {
 		morososRepositorio.deleteById(id);
 		return "redirect:/menu";
 	}
-	
-	@PostMapping(value = "/eliminarMorosos")
-	public String eliminarMorosos(HttpServletRequest request, Model model) {
-		long usuarioID = (long) request.getSession().getAttribute("usuarioID");
-		Usuarios usuarioSesion = usuariosRepositorio.getOne(usuarioID);
-		model.addAttribute(morososRepositorio.findAllByusuario(usuarioSesion));
-		morososRepositorio.deleteAll();
-		return "redirect:/menu";
-	}
+		
+//	@PostMapping(value = "/eliminarMorosos")
+//	public String eliminarMorosos(HttpServletRequest request, Model model) {
+//		long usuarioID = (long) request.getSession().getAttribute("usuarioID");
+//		Usuarios usuarioSesion = usuariosRepositorio.getOne(usuarioID);
+//		model.addAttribute(morososRepositorio.findAllByusuario(usuarioSesion));
+//		morososRepositorio.deleteAll();
+//		return "redirect:/menu";
+//	}
 	
 	@PostMapping(value = "/editarMoroso")
 	public String editarMoroso(@RequestParam long id, @RequestParam String nombre, @RequestParam String apellidos,
