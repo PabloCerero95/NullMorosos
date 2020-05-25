@@ -23,10 +23,13 @@ public class AppNullMorososApplication {
 //	public CommandLineRunner initData(UsuariosRepositorio usuarioRepositorio, MorososRepositorio morosoRepositorio) {
 //		return args -> {
 //
+//			Usuarios usuario = new Usuarios("pablo", "barbaro", "pablo", "1243");
+//			Usuarios usuario = new Usuarios("Juan", "Perez", "juanPerro", "Eleee");
 //			Usuarios usuario = new Usuarios("alesito", "diaz", "alexporrero", "pelo");
 //			usuario = usuarioRepositorio.save(usuario);
 //
 //			Morosos moroso = new Morosos("pollo", "pollete", usuario, 20.50f);
+//			Morosos moroso = new Morosos("sergio", "gorditofeliz", usuario, 567.50);
 //			morosoRepositorio.save(moroso);
 //
 //		};
